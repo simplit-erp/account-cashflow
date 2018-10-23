@@ -1,0 +1,14 @@
+<odoo>
+  <data>
+    <record id="account_invoice_view_form_inherit_cashflow" model="ir.ui.view">
+            <field name="name">account.invoice.view.form.inherit.cashflow</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+              <xpath expr="//field[@name='date_due']" position="after">
+                <field name="date_cashflow"/>
+              </xpath>
+			</field>  
+    </record>
+  </data>
+</odoo>
